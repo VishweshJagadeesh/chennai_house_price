@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chennai Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+	<h2>Area (Square Feet)</h2>
+    <input class="area"  type="text" id="uiSqft" class="floatLabel" name="uisqft">
+	<h2>Property Age</h2>
+    <input class="age"  type="text" id="yrs" class="floatLabel" name="uiyrs">
+	<h2>No of bedrooms</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bedr-1" name="uiBedr" value="1"/>
+		<label for="radio-bedr-1">1</label>
+		<input type="radio" id="radio-bedr-2" name="uiBedr" value="2"/>
+		<label for="radio-bedr-2">2</label>
+		<input type="radio" id="radio-bedr-3" name="uiBedr" value="3"/>
+		<label for="radio-bedr-3">3</label>
+		<input type="radio" id="radio-bedr-4" name="uiBedr" value="4"/>
+		<label for="radio-bedr-4">4</label>
+		<input type="radio" id="radio-bedr-5" name="uiBedr" value="5"/>
+		<label for="radio-bedr-5">5</label>
+	</div>
+	<h2>No of Bathrooms</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+		<label for="radio-bath-1">1</label>
+		<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+		<label for="radio-bath-2">2</label>
+		<input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+		<label for="radio-bath-3">3</label>
+		<input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+		<label for="radio-bath-4">4</label>
+		<input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
+		<label for="radio-bath-5">5</label>
+	</div>
+	</form>
+<form class="form">
+	<h2>no of rooms</h2>
+    <input class="nroom"  type="text" id="uiroom" class="floatLabel" name="nroom">
+	<h2>Location</h2>
+	<div>
+  <select class="location" name="" id="uiLocations">
+    <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+		<option>adayar</option>
+        <option>anna nagar</option>
+		<option>chrompet</option>
+		<option>karapakam</option>
+		<option>kk nagar</option>
+		<option>t nagar</option>
+		<option>velachery</option>
+  </select>
+  <h2>Parking facility</h2>
+  <div>
+	<select class="Parking" name="" id="uipark">
+  	<option value="" disabled="disabled" selected="selected">Choose availability</option>
+	    <option>yes</option>
+	  	<option>no</option>
+	</select>
+  <h2>Sale condition</h2>
+  <div>
+<select class="sale" name="" id="uisale">
+  <option value="" disabled="disabled" selected="selected">Choose sale condition</option>
+	  <option>adjland</option>
+	  <option>abnormal</option>
+	  <option>family</option>
+	  <option>normalsale</option>
+	  <option>partial</option>
+</select>
+<h2>municipality zone</h2>
+  <div>
+<select class="mzzone" name="" id="uizone">
+	<option value="" disabled="disabled" selected="selected">Choose municipality zone</option>
+		<option>A</option>
+		<option>C</option>
+		<option>I</option>
+		<option>RH</option>
+		<option>RL</option>
+		<option>RM</option>
+  </select>
+  <h2>available utilities</h2>
+  <div>
+<select class="utilavail" name="" id="uiutil">
+	<option value="" disabled="disabled" selected="selected">Choose available utilities</option>
+		<option>all public facilities</option>
+		<option>all public facilities and electic operated lift</option>
+		<option>no sewage</option>
+  </select>
+  <h2>bulidtype</h2>
+  <div>
+<select class="buildtype" name="" id="uibtype">
+	<option value="" disabled="disabled" selected="selected">select build type</option>
+		<option>house</option>
+		<option>commercial</option>
+		<option>other</option>
+  </select>
+  <h2>street</h2>
+  <div>
+<select class="street" name="" id="uistreet">
+	<option value="" disabled="disabled" selected="selected">select build type</option>
+		<option>no access</option>
+		<option>gravel</option>
+		<option>paved</option>
+  </select>  
+</div>
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+</body>
+</html>
